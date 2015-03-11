@@ -1,0 +1,8 @@
+  <%= form_for (song) do |f| %>
+ 
+    <h2> <%= song.title %></h2>
+    <%= song.embed_code.html_safe%>
+    <h3> <%= song.like.count %></h3>  
+    <%= f.hidden_field :song , value: song %> 
+    <%= f.submit 'Like' %>
+  <% end %>
